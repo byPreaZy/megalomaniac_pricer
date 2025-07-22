@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "builds": [
+    { "src": "frontend/index.html", "use": "@vercel/static" },
+    { "src": "api/pricer.js", "use": "@vercel/node" }
+  ],
+  "routes": [
+    { "src": "/api/pricer", "dest": "/api/pricer.js" },
+    { "src": "/", "dest": "/frontend/index.html" }
+  ]
+}
